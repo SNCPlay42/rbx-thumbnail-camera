@@ -4,6 +4,7 @@ local toolbar = plugin:CreateToolbar("Camera Saving/Loading")
 local storageValue = workspace:FindFirstChild("SavedCameraPos")
 local focusValue = storageValue and storageValue:FindFirstChild("Focus")
 
+while not workspace.CurrentCamera do wait() end
 local camera = workspace.CurrentCamera
 
 local buttonSave = toolbar:CreateButton("", "Save the camera postition", "camera_edit.png")
