@@ -1,4 +1,3 @@
-local plugin = PluginManager():CreatePlugin()
 local toolbar = plugin:CreateToolbar("Camera Saving/Loading")
 
 local storageValue = workspace:FindFirstChild("SavedCameraPos")
@@ -7,8 +6,8 @@ local focusValue = storageValue and storageValue:FindFirstChild("Focus")
 while not workspace.CurrentCamera do wait() end
 local camera = workspace.CurrentCamera
 
-local buttonSave = toolbar:CreateButton("", "Save the camera postition", "camera_edit.png")
-local buttonLoad = toolbar:CreateButton("", "Restore the camera position", "camera_go.png")
+local buttonSave = toolbar:CreateButton("", "Save the camera postition", "http://www.roblox.com/asset/?id=2611425")
+local buttonLoad = toolbar:CreateButton("", "Restore the camera position", "http://www.roblox.com/asset/?id=2611441")
 
 buttonSave.Click:connect(function()
 	if not storageValue then
